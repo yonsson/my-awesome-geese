@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Скрипт обращает слово
+
+stroka=$*
+
+count=${#stroka}
+# echo $count
+
+if [ $count == 0 ]
+then
+	echo "Буковок нету совсем"
+	exit
+fi
+
+for (( i = $count ; i >= 0 ; i-- ))
+do
+#	echo $i
+#	echo ${stroka:$i:1}
+	trb="$trb${stroka:$i:1}"
+done
+
+echo $trb
